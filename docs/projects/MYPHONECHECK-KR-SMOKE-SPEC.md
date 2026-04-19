@@ -59,4 +59,8 @@ For each tag, note **one** exemplar line pattern (e.g. `TamperChecker: verdict=F
 2. Repeat on Neo clone; diff logical fields only.  
 3. If mismatch: compare `ANDROID_HOME`, Gradle path, and `prefer_local_path`.
 
+## 8. Neo environment applicability
+
+The spec is **environment-agnostic**: a Neo runner only needs the same **repo layout** (`executing-OS` clone + sibling app repo per `prefer_local_path`), **`ANDROID_HOME`**, and the **same payload path**. No Cursor-only steps. Optional guard/logcat scenarios (§4) apply unchanged once log tags are aligned with the real app.
+
 See also [`myphonecheck.md`](myphonecheck.md).
