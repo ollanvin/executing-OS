@@ -3,7 +3,7 @@
 ## 1. Repo alignment
 
 - **`ollanvin/executing-OS`** was reset to match the **Executor OS** tree previously validated under Cursor `local-agent` (robocopy + legacy NeO removal + `.gitignore` + docs).
-- **Tag:** `executor-os-factory-m1` — factory-first snapshot for Neo clones.
+- **Tag:** `executor-os-factory-m1` — factory-first snapshot for Neo clones (**`406ca37`** on `main`, pushed to `origin`).
 - **Canonical source:** After M1, **GitHub `executing-OS` `main`** is the **Executor OS** canonical tree (not the ad-hoc `local-agent` folder).
 
 ## 2. Neo first tests

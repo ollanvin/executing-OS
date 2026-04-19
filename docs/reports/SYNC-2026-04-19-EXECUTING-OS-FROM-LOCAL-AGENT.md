@@ -34,8 +34,8 @@ Ignores: `.env*`, `*.log`, `runs/`, `__pycache__/`, `node_modules/`, `artifacts/
 
 ## Git
 
-- **Commit:** `84d99b2` on `main` — *Align executing-OS repo with local-agent Executor OS (factory M1)*.
-- **Tag:** `executor-os-factory-m1` (annotated).
+- **Commits on `main`:** `84d99b2` (*Align executing-OS repo with local-agent Executor OS (factory M1)*) + `406ca37` (*docs: record M1 sync commit hash in SYNC report*).
+- **Tag:** `executor-os-factory-m1` (annotated) → **`406ca37`**.
 
 ## Canonical repo going forward
 
