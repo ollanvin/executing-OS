@@ -1,0 +1,42 @@
+{
+  "id": "KR",
+  "country_code": "KR",
+  "locale_default": "ko-KR",
+  "locale": "ko-KR",
+  "timezone": "Asia/Seoul",
+  "currency": "KRW",
+  "date_format": "yyyy-MM-dd",
+  "number_format": "ko_KR",
+  "phone_number_format_baseline": "+82-10-1234-5678 (national + E.164 examples)",
+  "search_providers": {
+    "primary": "naver",
+    "secondary": "google",
+    "others": ["daum", "bing"]
+  },
+  "policy_overrides": {
+    "force_locale": false,
+    "force_timezone": false,
+    "force_phone_number_format": false,
+    "force_date_format": false,
+    "force_number_format": false
+  },
+  "store": {
+    "android": "play",
+    "notes": "One Store optional for domestic distribution"
+  },
+  "age_limit": {
+    "min_age_years": 14,
+    "parental_consent_required": false
+  },
+  "payment_methods": {
+    "allowed": ["card", "carrier_billing", "kakaopay", "naverpay"]
+  },
+  "feature_flags": {
+    "promo_banner": true,
+    "gambling_modules": false
+  },
+  "legal": {
+    "privacy_regime": "PIPA",
+    "marketing_consent_required": true
+  }
+}

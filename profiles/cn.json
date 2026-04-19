@@ -1,0 +1,42 @@
+{
+  "id": "CN",
+  "country_code": "CN",
+  "locale_default": "zh-CN",
+  "locale": "zh-CN",
+  "timezone": "Asia/Shanghai",
+  "currency": "CNY",
+  "date_format": "yyyy-MM-dd",
+  "number_format": "zh_CN",
+  "phone_number_format_baseline": "+86-138-0000-0000 (E.164 style)",
+  "search_providers": {
+    "primary": "baidu",
+    "secondary": "google",
+    "others": ["sogou", "360search"]
+  },
+  "policy_overrides": {
+    "force_locale": false,
+    "force_timezone": false,
+    "force_phone_number_format": false,
+    "force_date_format": false,
+    "force_number_format": false
+  },
+  "store": {
+    "android": "domestic_stores",
+    "notes": "Distribution via local app markets; Play availability varies"
+  },
+  "age_limit": {
+    "min_age_years": 14,
+    "real_name_verification": true
+  },
+  "payment_methods": {
+    "allowed": ["alipay", "wechat_pay", "unionpay"]
+  },
+  "feature_flags": {
+    "promo_banner": true,
+    "gambling_modules": false
+  },
+  "legal": {
+    "privacy_regime": "PIPL",
+    "marketing_consent_required": true
+  }
+}

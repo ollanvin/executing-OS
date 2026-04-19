@@ -1,0 +1,42 @@
+{
+  "id": "US",
+  "country_code": "US",
+  "locale_default": "en-US",
+  "locale": "en-US",
+  "timezone": "America/New_York",
+  "currency": "USD",
+  "date_format": "MM/dd/yyyy",
+  "number_format": "en_US",
+  "phone_number_format_baseline": "+1-555-010-0199 (E.164)",
+  "search_providers": {
+    "primary": "google",
+    "secondary": "bing",
+    "others": ["yahoo", "duckduckgo"]
+  },
+  "policy_overrides": {
+    "force_locale": false,
+    "force_timezone": false,
+    "force_phone_number_format": false,
+    "force_date_format": false,
+    "force_number_format": false
+  },
+  "store": {
+    "android": "play",
+    "ios": "app_store"
+  },
+  "age_limit": {
+    "min_age_years": 13,
+    "coppa_sensitive": true
+  },
+  "payment_methods": {
+    "allowed": ["card", "paypal", "apple_pay", "google_pay"]
+  },
+  "feature_flags": {
+    "promo_banner": true,
+    "gambling_modules": false
+  },
+  "legal": {
+    "privacy_regime": "CCPA",
+    "marketing_consent_required": false
+  }
+}

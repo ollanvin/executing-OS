@@ -1,0 +1,55 @@
+{
+  "project_id": "AndroidPaparazziDemo",
+  "platform": "android",
+  "prefer_local_path": "../cardspend/android",
+  "gradle_wrapper_relative": "gradlew.bat",
+  "default_branch": "main",
+  "default_build_profile": "debug",
+  "default_test_profile": "paparazzi_subset",
+  "default_country_code": "KR",
+  "build": {
+    "debug": {
+      "tasks": ["assembleDebug"]
+    }
+  },
+  "test": {
+    "paparazzi_subset": {
+      "tasks": [
+        "testDebugUnitTest",
+        "--tests",
+        "com.idolab.cardspend.screenshot.ScreenshotTest"
+      ]
+    },
+    "none": {
+      "skip": true
+    }
+  },
+  "apk_glob": ["**/outputs/apk/**/*.apk"],
+  "screenshot": {
+    "enabled": true,
+    "paparazzi_enabled": true,
+    "runtime_capture_enabled": false,
+    "required_min_count": 1,
+    "baseline_mode": "verify",
+    "gradle_record_task": "recordPaparazziDebug",
+    "gradle_verify_task": "verifyPaparazziDebug",
+    "module_dir": "app"
+  },
+  "quality_gate": {
+    "build_success_required": true,
+    "test_pass_required": true,
+    "runtime_smoke_required": false,
+    "paparazzi_verify_required": true,
+    "paparazzi_diff_fails_gate": true,
+    "runtime_capture_min_screenshots": null
+  },
+  "retry_policy": {
+    "max_attempts_build": 2,
+    "max_attempts_test": 2,
+    "max_attempts_runtime": 2,
+    "max_attempts_screenshot": 1,
+    "structural_max_attempts": 1,
+    "max_pipeline_attempts": 1,
+    "recipes_on_fail": ["gradle_clean_rebuild", "adb_reconnect"]
+  }
+}

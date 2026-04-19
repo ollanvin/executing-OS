@@ -1,0 +1,55 @@
+{
+  "project_id": "MyPhoneCheck",
+  "platform": "android",
+  "repo_url": "",
+  "prefer_local_path": "../myphonecheck",
+  "onboarding_notes": [
+    "TODO: Set ANDROID_HOME (and optionally JAVA_HOME) in the shell or CI job before running this project.",
+    "TODO: Confirm ../myphonecheck matches your checkout; adjust prefer_local_path if the repo lives elsewhere.",
+    "TODO: When ready, switch default_test_profile from none to real Gradle test tasks and tighten quality_gate.",
+    "Scaffold-only for this round — do not treat gate results as production-ready until the above are done."
+  ],
+  "gradle_wrapper_relative": "gradlew.bat",
+  "default_branch": "main",
+  "default_build_profile": "debug",
+  "default_test_profile": "none",
+  "default_country_code": "KR",
+  "build": {
+    "debug": {
+      "tasks": ["assembleDebug"]
+    }
+  },
+  "test": {
+    "none": {
+      "skip": true
+    }
+  },
+  "apk_glob": ["**/outputs/apk/**/*.apk"],
+  "screenshot": {
+    "enabled": false,
+    "paparazzi_enabled": false,
+    "runtime_capture_enabled": false,
+    "required_min_count": 0,
+    "baseline_mode": "verify",
+    "gradle_record_task": "recordPaparazziDebug",
+    "gradle_verify_task": "verifyPaparazziDebug",
+    "module_dir": "app"
+  },
+  "quality_gate": {
+    "build_success_required": true,
+    "test_pass_required": false,
+    "paparazzi_verify_required": false,
+    "paparazzi_diff_fails_gate": false,
+    "runtime_smoke_required": false,
+    "runtime_capture_min_screenshots": null
+  },
+  "retry_policy": {
+    "max_attempts_build": 2,
+    "max_attempts_test": 2,
+    "max_attempts_runtime": 2,
+    "max_attempts_screenshot": 1,
+    "structural_max_attempts": 1,
+    "max_pipeline_attempts": 1,
+    "recipes_on_fail": ["gradle_clean_rebuild", "adb_reconnect"]
+  }
+}

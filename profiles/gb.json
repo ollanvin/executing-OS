@@ -1,0 +1,25 @@
+{
+  "id": "GB",
+  "country_code": "GB",
+  "locale_default": "en-GB",
+  "locale": "en-GB",
+  "timezone": "Europe/London",
+  "currency": "GBP",
+  "search_providers": {
+    "primary": "google",
+    "secondary": "bing",
+    "others": ["duckduckgo"]
+  },
+  "policy_overrides": {
+    "force_locale": false,
+    "force_timezone": false
+  },
+  "feature_flags": {
+    "promo_banner": true,
+    "gambling_modules": false
+  },
+  "legal": {
+    "privacy_regime": "UK_GDPR",
+    "marketing_consent_required": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "executor-web-stub",
+  "private": true,
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "test": "node ./scripts/test.js"
+  }
+}

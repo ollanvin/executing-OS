@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    { "id": "splash", "screen": "Splash" },
+    { "id": "home", "screen": "Home" },
+    { "id": "detail", "screen": "Detail" }
+  ],
+  "edges": [
+    { "from": "splash", "to": "home" },
+    { "from": "home", "to": "detail" }
+  ]
+}

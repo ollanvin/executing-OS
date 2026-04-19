@@ -7,20 +7,31 @@ __pycache__/
 venv/
 env/
 
-# Local / generated
-local-agent.log
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Logs
 *.log
-agent/_t.log
+local-agent.log
+
+# Executor OS generated runs (machine-local)
+runs/
+
+# Queue DB (optional local; use fresh DB in CI)
+runs/executor_queue.db
+runs/g20_webstub_queue.db
+
+# Node (fixture installs)
+node_modules/
 
 # Build & device artifacts (large, machine-specific)
 artifacts/
 
-# OS
+# OS / editor
 .DS_Store
 Thumbs.db
-
-# Editor
 .idea/
 .vscode/
 *.swp
-.env.txt

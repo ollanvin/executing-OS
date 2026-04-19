@@ -1,0 +1,6 @@
+{
+  "project_id": "WebStub",
+  "country_batch": true,
+  "country_selection_mode": "G20_THEN_ISO",
+  "country_limit": 5
+}

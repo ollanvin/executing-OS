@@ -1,0 +1,42 @@
+{
+  "id": "JP",
+  "country_code": "JP",
+  "locale_default": "ja-JP",
+  "locale": "ja-JP",
+  "timezone": "Asia/Tokyo",
+  "currency": "JPY",
+  "date_format": "yyyy/MM/dd",
+  "number_format": "ja_JP",
+  "phone_number_format_baseline": "+81-90-1234-5678 (E.164 style)",
+  "search_providers": {
+    "primary": "google",
+    "secondary": "yahoo_japan",
+    "others": ["bing"]
+  },
+  "policy_overrides": {
+    "force_locale": false,
+    "force_timezone": false,
+    "force_phone_number_format": false,
+    "force_date_format": false,
+    "force_number_format": false
+  },
+  "store": {
+    "android": "play",
+    "ios": "app_store"
+  },
+  "age_limit": {
+    "min_age_years": 13,
+    "marketing_consent_required": true
+  },
+  "payment_methods": {
+    "allowed": ["card", "carrier_billing", "paypay", "line_pay"]
+  },
+  "feature_flags": {
+    "promo_banner": false,
+    "gambling_modules": false
+  },
+  "legal": {
+    "privacy_regime": "APPI",
+    "marketing_consent_required": true
+  }
+}

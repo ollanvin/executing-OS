@@ -1,0 +1,22 @@
+{
+  "project_id": "IosStubFrontEnd",
+  "platform": "ios",
+  "prefer_local_path": "fixtures/ios_stub",
+  "default_branch": "main",
+  "default_build_profile": "export_preflight",
+  "default_test_profile": "shared_logic_only",
+  "default_country_code": "JP",
+  "ios_flows_relative": "flows.json",
+  "ios_required_string_files": ["strings/en.json", "strings/ko.json"],
+  "screenshot": {
+    "enabled": false,
+    "paparazzi_enabled": false,
+    "runtime_capture_enabled": false
+  },
+  "quality_gate": {
+    "build_success_required": true,
+    "test_pass_required": true,
+    "paparazzi_verify_required": false,
+    "runtime_smoke_required": false
+  }
+}

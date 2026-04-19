@@ -1,0 +1,37 @@
+{
+  "project_id": "Fooapp",
+  "platform": "android",
+  "prefer_local_path": "../myphonecheck",
+  "gradle_wrapper_relative": "gradlew.bat",
+  "default_branch": "main",
+  "default_build_profile": "debug",
+  "default_test_profile": "none",
+  "default_country_code": "KR",
+  "country_selection_mode": "G20_THEN_ISO",
+  "country_batch": false,
+  "build": {
+    "debug": {
+      "tasks": [
+        "assembleDebug"
+      ]
+    }
+  },
+  "test": {
+    "none": {
+      "skip": true
+    }
+  },
+  "apk_glob": [
+    "**/outputs/apk/**/*.apk"
+  ],
+  "screenshot": {
+    "enabled": false,
+    "paparazzi_enabled": false,
+    "runtime_capture_enabled": false
+  },
+  "quality_gate": {
+    "build_success_required": true,
+    "test_pass_required": false,
+    "paparazzi_verify_required": false
+  }
+}

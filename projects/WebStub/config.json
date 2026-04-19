@@ -1,0 +1,26 @@
+{
+  "project_id": "WebStub",
+  "platform": "web",
+  "prefer_local_path": "fixtures/web_stub",
+  "default_branch": "main",
+  "default_build_profile": "debug",
+  "default_test_profile": "default",
+  "default_country_code": "US",
+  "web_build_commands": [
+    ["npm", "install"],
+    ["npm", "run", "build"]
+  ],
+  "web_test_commands": [["npm", "run", "test"]],
+  "screenshot": {
+    "enabled": false,
+    "paparazzi_enabled": false,
+    "runtime_capture_enabled": false
+  },
+  "quality_gate": {
+    "build_success_required": true,
+    "test_pass_required": true,
+    "paparazzi_verify_required": false,
+    "paparazzi_diff_fails_gate": false,
+    "runtime_smoke_required": false
+  }
+}
