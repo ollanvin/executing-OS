@@ -2,7 +2,7 @@
 
 **When:** 2026-04-19 (UTC run timestamps in `task_result_report.json`)  
 **Repo:** `C:\Users\user\Dev\ollanvin\executing-OS`  
-**Git:** `main` @ **`a9ab40432da1c2fbff03e17e7be3b3d722c8246c`** (includes M1 equivalence docs; run executed at this revision)
+**Git:** Pipeline executed with tree **`a9ab40432da1c2fbff03e17e7be3b3d722c8246c`** (`main`). This report file was committed as **`df23704`** (docs-only follow-up).
 
 ## Spec scenarios executed
 
