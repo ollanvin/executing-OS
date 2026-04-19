@@ -34,7 +34,7 @@ Ignores: `.env*`, `*.log`, `runs/`, `__pycache__/`, `node_modules/`, `artifacts/
 
 ## Git
 
-- **Commit:** `Align executing-OS repo with local-agent Executor OS (factory M1)` (hash recorded at push time on `main`).
+- **Commit:** `84d99b2` on `main` — *Align executing-OS repo with local-agent Executor OS (factory M1)*.
 - **Tag:** `executor-os-factory-m1` (annotated).
 
 ## Canonical repo going forward
