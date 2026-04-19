@@ -18,3 +18,5 @@ python local_pipeline.py payloads\web_stub_us.json
 ```
 
 Neo / parity checklist: [`docs/reports/NEO-EQUIVALENCE-PLAN-WEBSTUB-KR-G20.md`](docs/reports/NEO-EQUIVALENCE-PLAN-WEBSTUB-KR-G20.md).
+
+**Desktop shortcut:** `run_neo.bat` + setup guide [`docs/windows/NEO-SHORTCUT-SETUP.md`](docs/windows/NEO-SHORTCUT-SETUP.md).
