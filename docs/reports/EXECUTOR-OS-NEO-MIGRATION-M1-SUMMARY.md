@@ -17,7 +17,7 @@ Run in order (see [`NEO-EQUIVALENCE-PLAN-WEBSTUB-KR-G20.md`](NEO-EQUIVALENCE-PLA
 ## 3. MyPhoneCheck
 
 - **Spec:** [`MYPHONECHECK-KR-SMOKE-SPEC.md`](../projects/MYPHONECHECK-KR-SMOKE-SPEC.md)
-- **Cursor M2 dry-run (Scenario A):** [`M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md`](M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md) @ `a9ab404` — SUCCEEDED / PASS / APPROVED / KR.
+- **Cursor M2 dry-run (Scenario A):** [`M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md`](M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md) — run at **`a9ab404`**, report on `main` ≥ **`a18c9fb`** — SUCCEEDED / PASS / APPROVED / KR.
 
 ## 4. Completion criterion (Neo vs Cursor)
 

@@ -7,7 +7,7 @@
 ## 1. Repository & layout
 
 1. `git clone https://github.com/ollanvin/executing-OS.git`
-2. `cd executing-OS` && `git checkout main` (use commit ≥ **`a9ab404`** or latest `main` that contains M2 docs).
+2. `cd executing-OS` && `git checkout main` (use **`a9ab404`** or later — e.g. **`a18c9fb`** includes M2 Cursor report + Neo M2 plan).
 3. Place **MyPhoneCheck Android repo** as sibling: `../myphonecheck` relative to clone root (same as `projects/MyPhoneCheck/config.json`).
 
 ## 2. Environment
