@@ -34,8 +34,9 @@ Ignores: `.env*`, `*.log`, `runs/`, `__pycache__/`, `node_modules/`, `artifacts/
 
 ## Git
 
-- **Commits on `main`:** `84d99b2` (*Align executing-OS repo with local-agent Executor OS (factory M1)*) + `406ca37` (*docs: record M1 sync commit hash*) + `3b54c13` (*docs: note M1 tag target commit*).
-- **Tag:** `executor-os-factory-m1` (annotated) → **`3b54c13`** (`main` / `origin/main` at push).
+- **Primary M1 tree commit:** `84d99b2` — *Align executing-OS repo with local-agent Executor OS (factory M1)* (bulk file add/remove).
+- **Follow-ups:** documentation-only commits on `main` through tag publication.
+- **Tag:** `executor-os-factory-m1` (annotated). Use `git show executor-os-factory-m1` for the exact snapshot commit after clone.
 
 ## Canonical repo going forward
 
