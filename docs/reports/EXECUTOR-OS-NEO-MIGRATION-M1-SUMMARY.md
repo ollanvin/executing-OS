@@ -16,8 +16,8 @@ Run in order (see [`NEO-EQUIVALENCE-PLAN-WEBSTUB-KR-G20.md`](NEO-EQUIVALENCE-PLA
 
 ## 3. MyPhoneCheck
 
-- **Spec only this round:** [`MYPHONECHECK-KR-SMOKE-SPEC.md`](../projects/MYPHONECHECK-KR-SMOKE-SPEC.md)
-- Payload `payloads/myphonecheck_kr.json` and `projects/MyPhoneCheck/config.json` are ready; **execution** is deferred to the next workorder.
+- **Spec:** [`MYPHONECHECK-KR-SMOKE-SPEC.md`](../projects/MYPHONECHECK-KR-SMOKE-SPEC.md)
+- **Cursor M2 dry-run (Scenario A):** [`M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md`](M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md) @ `a9ab404` — SUCCEEDED / PASS / APPROVED / KR.
 
 ## 4. Completion criterion (Neo vs Cursor)
 
@@ -29,10 +29,9 @@ Path/timestamp differences do **not** invalidate parity.
 
 ## 4b. M2 — MyPhoneCheck KR dry-run (Cursor → Neo)
 
-- **Cursor:** Run `python local_pipeline.py payloads\myphonecheck_kr.json` with `ANDROID_HOME` set and `../myphonecheck` resolving; capture `status`, `validation`, `gate`, `countries_run`, and archive `reports/*.json` + `build/build.log` per [`MYPHONECHECK-KR-SMOKE-SPEC.md`](../projects/MYPHONECHECK-KR-SMOKE-SPEC.md).
-- **Neo:** Fresh `executing-OS` clone, identical layout and env; run the **same** payload; compare logical fields only (same table as M1).
-- **Gate:** Extend [`NEO-EQUIVALENCE-RUN-RESULTS-M1.md`](NEO-EQUIVALENCE-RUN-RESULTS-M1.md) or add `NEO-EQUIVALENCE-RUN-RESULTS-M2-MYPC.md` with a MyPhoneCheck row.
-- **Product readiness:** When Scenario A matches on both sides, treat MyPhoneCheck as **vision-verification ready** for factory handoff; Scenarios B/C remain backlog until guard/UI automation exists.
+1. **Cursor (done):** See [`M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md`](M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md) — same command on `executing-OS` @ `a9ab404`; artefacts under `runs/MyPhoneCheck/<run_id>/`.
+2. **Neo:** Clone `main`, set `ANDROID_HOME` + sibling `myphonecheck`, run `python local_pipeline.py payloads\myphonecheck_kr.json` per [`NEO-EQUIVALENCE-PLAN-M2-MYPHONECHECK-KR.md`](NEO-EQUIVALENCE-PLAN-M2-MYPHONECHECK-KR.md); diff **status, validation, gate, failure_class, decision, countries_run** against the Cursor run.
+3. **Optional:** With device, capture the same **logcat** tag filters and attach summaries; then add a Neo row to a small `NEO-EQUIVALENCE-RUN-RESULTS-M2-MYPC.md` or extend M1 results doc.
 
 ## 5. References
 
@@ -42,3 +41,5 @@ Path/timestamp differences do **not** invalidate parity.
 | [`FORENSICS-EXECUTOR-OS-SOURCE-2026-04-19.md`](../forensics/FORENSICS-EXECUTOR-OS-SOURCE-2026-04-19.md) | local-agent snapshot reference |
 | [`ADR-003`](../adr/ADR-003-LEGACY-NEO-AGENT-REMOVED.md) | Legacy NeO removal |
 | [`NEO-EQUIVALENCE-RUN-RESULTS-M1.md`](NEO-EQUIVALENCE-RUN-RESULTS-M1.md) | M1 Cursor vs Neo-clone run matrix + decision block |
+| [`M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md`](M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md) | M2 Cursor MyPhoneCheck KR smoke |
+| [`NEO-EQUIVALENCE-PLAN-M2-MYPHONECHECK-KR.md`](NEO-EQUIVALENCE-PLAN-M2-MYPHONECHECK-KR.md) | M2 Neo commands + parity fields |

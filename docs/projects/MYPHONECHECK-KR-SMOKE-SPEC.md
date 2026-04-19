@@ -1,6 +1,6 @@
 # MyPhoneCheck — KR smoke & dry-run spec (Cursor / Neo shared)
 
-**Status:** Specification only — **no mandatory execution** in the M1 migration round.  
+**Status:** Scenario A executed on Cursor (M2) — see [`M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md`](../reports/M2-MYPHONECHECK-KR-SMOKE-RUN-CURSOR.md). Scenarios B/C still backlog.  
 **Payload:** `payloads/myphonecheck_kr.json`  
 **Project config:** `projects/MyPhoneCheck/config.json`
 
