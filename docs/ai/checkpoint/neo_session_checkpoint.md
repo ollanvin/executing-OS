@@ -2,6 +2,12 @@
 
 이 파일은 `docs/ai/rule/ai_rules_neo.md`에 정의된 절차에 따라, 규칙·헌법 관련 **주요 결정과 세션 경계**를 요약해 둔다.
 
+## SESSION CORE (canonical pointer)
+
+세션 시작 시 운영자·에이전트가 동일한 경로를 참조하도록, 아래 한 줄을 기준으로 한다.
+
+- 최신 SSW(latest_ssw_path): `docs/ai/ssw/2026-04-21_app_factory_ready_to_context.txt`
+
 ---
 
 ## 2026-04-21 세션 요약 (ai_rules_neo 잠금)
