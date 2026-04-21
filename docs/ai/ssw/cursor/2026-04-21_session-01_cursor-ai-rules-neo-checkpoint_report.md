@@ -6,7 +6,7 @@
 - task_key: ai-rules-neo-checkpoint
 - repo: executing-OS
 - branch: main
-- commit: 48d5c06 (checkpoint·?? ???); UTF-8 ?? ?? b1ba076
+- commit: 48d5c06 (checkpointï¿½?? ???); UTF-8 ?? ?? b1ba076
 
 ## 2. What I did
 - [x] `docs/ai/checkpoint/neo_session_checkpoint.md` ????(?? ?? ? 2026-04-21 ?? ??)
