@@ -1,0 +1,9 @@
+node_modules/
+output/
+dist/
+*.log
+
+# Secrets (standard local config — use with scripts/runWithNeoEnv.mjs + node --env-file)
+.env
+.env.local
+.env.*.local

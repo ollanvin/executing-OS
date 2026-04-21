@@ -1,0 +1,20 @@
+{
+  "allowedRoots": [
+    "C:\\Users\\user\\Dev\\ollanvin\\executing-OS"
+  ],
+  "forbiddenRoots": [
+    "C:\\Windows",
+    "C:\\Program Files",
+    "C:\\Program Files (x86)"
+  ],
+  "maxBackupSizeMB": 1024,
+  "maxFilesPerCommand": 1000,
+  "highRiskActions": [
+    "FILE_DELETE",
+    "FILE_MOVE",
+    "APP_INSTALL",
+    "APP_UPDATE",
+    "VM_STATE_CHANGE",
+    "EMULATOR_STATE_CHANGE"
+  ]
+}

@@ -29,6 +29,9 @@ node_modules/
 # Build & device artifacts (large, machine-specific)
 artifacts/
 
+# Neo Operator COW snapshots & audit (machine-local)
+.neo-safekeep/
+
 # OS / editor
 .DS_Store
 Thumbs.db

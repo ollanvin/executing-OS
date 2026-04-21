@@ -1,0 +1,39 @@
+{
+  "name": "hex-executor-console-backend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/runWithNeoEnv.mjs watch src/index.ts",
+    "start": "node scripts/runWithNeoEnv.mjs src/index.ts",
+    "report:myphone-planner": "node scripts/runWithNeoEnv.mjs src/smoke/reportMyPhoneCapturePlanner.ts",
+    "probe:planner-myphone": "node scripts/runWithNeoEnv.mjs src/smoke/plannerPathProbe.ts",
+    "smoke:operator": "tsx src/smoke/runOperatorVerification.ts",
+    "smoke:stage1-myphone-capture": "node scripts/runWithNeoEnv.mjs src/smoke/stage1MyPhoneCaptureOrderVerification.ts",
+    "smoke:e2e-myphone-bundle": "node scripts/runWithNeoEnv.mjs src/smoke/runMyPhoneCheckCaptureBundle.ts",
+    "smoke:myphone-orchestrator": "node scripts/runWithNeoEnv.mjs src/smoke/runMyphonecheckOrchestratorSmoke.ts",
+    "smoke:ollama-host": "node scripts/runWithNeoEnv.mjs src/smoke/runOllamaHostExecutorSmoke.ts",
+    "smoke:sandbox-protocol": "node scripts/runWithNeoEnv.mjs src/smoke/runSandboxProtocolSmoke.ts",
+    "smoke:constitution": "node scripts/runWithNeoEnv.mjs src/smoke/runConstitutionEngineSmoke.ts",
+    "smoke:constitution-schema": "node scripts/runWithNeoEnv.mjs src/smoke/runConstitutionSchemaSmoke.ts",
+    "smoke:constitution-static-analysis": "node scripts/runWithNeoEnv.mjs src/smoke/runConstitutionStaticAnalysisSmoke.ts",
+    "smoke:constitution-lifecycle": "node scripts/runWithNeoEnv.mjs src/smoke/runConstitutionLifecycleSmoke.ts",
+    "smoke:realrun": "node scripts/runWithNeoEnv.mjs src/smoke/runRealrunStateMachineSmoke.ts"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "ts-morph": "^25.0.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "dotenv": "^17.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "~5.6.2"
+  }
+}

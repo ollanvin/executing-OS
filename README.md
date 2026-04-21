@@ -80,4 +80,6 @@ Neo / parity checklist: [`docs/reports/NEO-EQUIVALENCE-PLAN-WEBSTUB-KR-G20.md`](
 
 데모 Web UI: [`hex-executor-console/README.md`](hex-executor-console/README.md) — `npm install && npm run dev` 로 좌측 Neo/Executor placeholder + 우측 Cursor형 채팅 패널을 브라우저에서 확인할 수 있습니다.
 
+Neo Local Operator Console은 **mutating action**에 대해 **canonical plan hash**·**COW safekeep**·**승인(해시) 바인딩**을 강제합니다. **AI provider**는 Gemini API와 로컬 Ollama를 지원하며, `AI_PROVIDER_MODE`·fallback 정책·도구별 circuit breaker에 따라 라우팅됩니다. **Deterministic parse**가 먼저이고, LLM은 주로 `unknown` 구간에만 쓰입니다. 운영 검증은 백엔드에서 `npm run smoke:operator` 로 자동화할 수 있습니다( [`hex-executor-console-backend/README.md`](hex-executor-console-backend/README.md) «운영 검증» 절).
+
 
