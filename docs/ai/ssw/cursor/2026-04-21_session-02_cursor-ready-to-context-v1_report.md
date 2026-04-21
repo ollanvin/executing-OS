@@ -50,6 +50,8 @@ task_key: ready-to-context-v1
 status: completed
 repo: github.com/ollanvin/executing-OS
 branch: main
+key_commit: 2f8da7e
+key_commit_message: docs: lock ready-to-context v1 and session read order
 
 changed_paths:
   - docs/ai/rule/ai_rules_neo.md
@@ -68,4 +70,4 @@ deliverables:
 ## Meta (자동 기입)
 
 - **브랜치:** `main` → `origin/main`
-- **핵심 커밋:** 이 리포트와 함께 기록되는 커밋 해시는 `git log -1 --oneline` 으로 확인한다.
+- **핵심 커밋:** `2f8da7e` — `docs: lock ready-to-context v1 and session read order`
