@@ -23,7 +23,7 @@
 
 - 맥락 관리 3 레이어 구조
   1) Rules (프로젝트 고정 규칙)
-     - 예: `docs/ai/ai_rules_neo.md`
+     - 예: `docs/ai/rule/ai_rules_neo.md`
      - 이 프로젝트에서 AI/에이전트가 절대 바꾸면 안 되는 상수:
        - 헌법 v4 기준 (constitution 레포 참조)
        - 에뮬레이터 우선, 실기기 런은 예외
@@ -32,7 +32,7 @@
      - 최종 편집권은 사람(대표님). AI는 수정 제안만 한다.
 
   2) Checkpoint (현재 진도 한 장 요약)
-     - 예: `docs/ai/neo_session_checkpoint.md`
+     - 예: `docs/ai/checkpoint/neo_session_checkpoint.md`
      - 내용:
        - 지금까지 구현된 것 3~10줄
        - 다음 세션에서 할 일 3~5줄
@@ -58,17 +58,17 @@
 ## 헐크/커서 사용 규칙 (다음 세션부터 적용)
 
 - AI는 임의로 새로운 SSW/요약 파일을 만들지 않는다.
-  - 규칙은 `docs/ai/ai_rules_neo.md`에서만 변경 제안.
-  - 현재 진도는 `docs/ai/neo_session_checkpoint.md`만 갱신.
-  - 세션 히스토리는 `docs/ai/ssw/YYYY-MM-DD_*.md` 아래에만 추가.
+  - 규칙은 `docs/ai/rule/ai_rules_neo.md`에서만 변경 제안.
+  - 현재 진도는 `docs/ai/checkpoint/neo_session_checkpoint.md`만 갱신.
+  - 세션 히스토리는 `docs/ai/ssw/` 아래 합의된 파일(예: 본 파일) 및 필요 시 날짜·주제 파일에만 추가.
 
 - 새 세션 시작 시, 사람(대표님)은 항상 다음 정보를 첫 프롬프트에 포함한다.
   - 프로젝트/레포:
     - executing-OS, app-factory-constitution
   - Rules 파일 경로:
-    - `docs/ai/ai_rules_neo.md`
+    - `docs/ai/rule/ai_rules_neo.md`
   - Checkpoint 파일 경로:
-    - `docs/ai/neo_session_checkpoint.md`
+    - `docs/ai/checkpoint/neo_session_checkpoint.md`
   - 이번 세션 목표 한 줄:
     - 예: "이번 세션: ai_rules_neo.md 규칙파일 내용 잠그기."
 
@@ -86,16 +86,20 @@
   - 세션 끝에는 Checkpoint 10줄 + 다음 세션 목표 1줄을 남기고,
   - 새 세션은 그 Checkpoint와 Rules/SSW 경로를 함께 주는 방식으로 시작한다.
 
-## 다음 세션 목표 (규칙파일 세션)
+## Ready-to-Context v1 확정 (2026-04-21)
 
-- executing-OS 레포 기준으로:
-  - `docs/ai/ai_rules_neo.md` 파일을 새로 만들거나, 존재한다면 내용을 v4 헌법/SSW 기준으로 정리.
-- 이 규칙파일에는 최소한 다음 내용을 포함해야 한다.
-  - App Factory 1.0 헌법 v4 관련 상수 (shared/constitution, AJV2020, AST, lifecycle 등).
-  - 에뮬레이터 우선 원칙, ADB/화면 캡처 툴 존재 및 활용 규칙.
-  - 네오/리얼런/컨트롤 플레인 역할 분담에 대한 고정 규칙.
-  - "아카이브 파일을 새로 만들지 말고, 정해진 파일만 갱신할 것"이라는 맥락 관리 규칙.
-- 세션 범위는 규칙파일 작성/수정까지로 제한하고,
-  - 실제 코드 변경(ADB 배선 등)은 그 다음 세션에서 처리한다.
+- `docs/ai/rule/ai_rules_neo.md`에 잠금·헌법 v4 우선·에뮬/ADB/캡처·문서 3폴더·Global reporting·헐크 워크오더 메타 규칙이 정리되었다.
+- 읽기 순서: `ai_rules_neo` → `neo_session_checkpoint` → checkpoint의 latest SSW → 채팅 `[SESSION CORE]` (세션 목표·한정 규율).
+- Cursor 블로그형 리포트는 `docs/ai/ssw/cursor/` + 파일명 패턴은 규칙 파일 §3 참조.
+
+---
+
+## 다음 세션 목표 — 네오(로컬 OS 에이전트) 1차 출범 (문서·규칙만, 실행 없음)
+
+- 목표 1: 네오 1차 역할 정의 — git·파일·빌드·실행·ADB·캡처·로컬 OS 전담 vs 헐크·대표님(전략·워크오더·리포트 리뷰).
+- 목표 2: SESSION CORE v2 설계 — v1 확장, 네오 전용 필드(에뮬·ADB 타겟·기본 패키지/모듈 등) vs 공통 필드.
+- 목표 3: 네오 워크오더 기본 템플릿 — 입력 SESSION CORE + task summary; 출력 작업 + git push + 블로그형 리포트 경로; 실패/예외 보고.
+- 목표 4: 네오 결과 리포트 규격 — 경로/파일명·섹션(OS 로그, adb/에뮬, 캡처, 실패 등); 헐크가 다음 워크오더 작성에 충분하도록.
+- 목표 5: 이번(다음) 세션에서 네오 부트스트랩/실행은 하지 않음 — 위만 규칙·문서로 설계.
 
 

@@ -36,11 +36,12 @@
 
 ## 3. 문서·아카이브 운영 규칙
 
-- AI 관련 문서는 **`docs/ai`** 아래에 두며, 하위는 **고정된 세 폴더만** 사용한다.
+- AI 관련 문서는 **`docs/ai`** 아래에 두며, **`docs/ai` 직속 하위는 고정된 세 폴더만** 사용한다.
   - `docs/ai/ssw`
   - `docs/ai/rule`
   - `docs/ai/checkpoint`
-- AI 세션 전용으로 **임의의 새 하위 폴더를 만들지 않는다.**
+- **`docs/ai` 직속에 네 번째 폴더를 새로 만들지 않는다.**
+- `docs/ai/ssw` 안에서는 **Global reporting rule(§3 하단)** 에 따라 **`cursor/`** 하위만 Cursor 블로그형 리포트용으로 사용한다. 그 외 **`ssw` 아래 임의의 새 하위 폴더를 만들지 않는다.**
 - 플래그 **`create_new_archive_files_freely: off`** 에 따라, 에이전트는 **임의의 새 아카이브 파일을 남발하지 않는다.**
 - **`docs/ai`** 아래의 **고정 경로·패턴**만 사용한다.
 
@@ -54,7 +55,11 @@
 
 ### Global reporting rule (블로그형 개발일지)
 
-작업이 끝나면 에이전트는 `docs/ai/ssw/cursor/` 아래, 정해진 파일명 패턴으로 **블로그 스타일** 개발일지 리포트를 남긴다.
+작업이 끝나면 에이전트는 **`docs/ai/ssw/cursor/`** 아래, 아래 **파일명 패턴**으로 **블로그 스타일** 개발일지 리포트를 남긴다.
+
+- **파일명 패턴:** `YYYY-MM-DD_session-<nn>_cursor-<slug>_report.md`
+  - 예: `2026-04-21_session-02_cursor-ready-to-context-v1_report.md`
+  - `<slug>`는 짧은 영문·하이픈(주제 식별용).
 
 **Constraints**
 
@@ -71,10 +76,11 @@
 새 AI 세션을 시작할 때 에이전트는 아래 순서로 문서를 읽는다.
 
 1. **`docs/ai/rule/ai_rules_neo.md`** (본 파일)
-2. **`docs/ai/checkpoint/neo_session_checkpoint.md`** (최신 체크포인트)
-3. **`docs/ai/ssw/`** 아래 **가장 최근 SSW 파일** (예: `2026-04-21_app_factory_ready_to_context.txt` 등 세션별 파일명)
+2. **`docs/ai/checkpoint/neo_session_checkpoint.md`** (최신 체크포인트; 여기에 **latest SSW 경로**가 있으면 그것을 우선)
+3. **`docs/ai/ssw/`** 아래 **checkpoint가 가리키는 최신 SSW 파일**(또는 합의된 날짜·주제의 SSW; 예: `2026-04-21_app_factory_ready_to_context.txt`)
+4. 운영자가 채팅에 붙여 넣는 **`[SESSION CORE]` 블록**(프로젝트 메타, 플래그, 이번 세션 목표, 고정 경로 포인터 등) — 저장소 밖에서 오는 **이번 세션의 공식 맥락**이다. 1~3과 표면상 모순될 때는 **헌법 v4**와 본 파일의 **비가역 제약**(예: 잠금 규칙 파일 정책)은 유지하고, 그 외 **세션 범위·목표·한정 규율**은 **SESSION CORE**를 우선한다.
 
-또한 운영자는 세션 시작 시 **“세션 시작 context 템플릿”**(프로젝트 메타, 규칙, 경로, 목표)을 제공한다. 에이전트는 이를 **공식 세션 맥락**으로 취급한다.
+운영자는 세션 시작 시 위 4번에 해당하는 **세션 시작 context 템플릿**을 제공하는 것을 권장한다. 에이전트는 이를 **해당 턴의 공식 세션 맥락**으로 취급한다.
 
 ---
 
